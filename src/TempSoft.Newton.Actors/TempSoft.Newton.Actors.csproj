@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>TempSoft.Newton.Actors</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>TempSoft.Newton.Actors</PackageId>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="3.0.232-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TempSoft.Newton.Interfaces\TempSoft.Newton.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="entryPoint.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
